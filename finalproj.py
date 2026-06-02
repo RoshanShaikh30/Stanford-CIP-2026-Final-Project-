@@ -1,6 +1,6 @@
 import turtle
-
-
+import time
+delay = 0.1
 sn = turtle.Screen()
 sn.title("Snake Game!")
 sn.bgcolor("blue")
@@ -36,6 +36,7 @@ def move():
 while True:
     sn.update()
     move()
+    time.sleep(delay)
 
 
 
