@@ -1,5 +1,7 @@
 import turtle
 import time
+import random 
+
 delay = 0.2
 sn = turtle.Screen()
 sn.title("Snake Game!")
@@ -36,7 +38,7 @@ sn.onkeypress(go_right, "d")
 food = turtle.Turtle()
 food.speed(0)
 food.shape("circle")
-food.color("red")
+food.color("brown")
 food.penup()
 food.goto(0, 100)
 
@@ -60,6 +62,12 @@ def move():
 
 while True:
     sn.update()
+    #moving food
+    if head.distance(food) < 20:
+        x = random.randint(-290, 290)
+        y = random.randint(-290, 290)
+        food.goto(x, y)
+        
     move()
     time.sleep(delay)
 
