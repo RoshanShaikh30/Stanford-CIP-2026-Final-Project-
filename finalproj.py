@@ -7,7 +7,7 @@ sn.bgcolor("blue")
 sn.setup(width=600, height=600)
 sn.tracer(0)
 
-#head ig
+#head
 head = turtle.Turtle()
 head.speed(0)
 head.shape("square")
