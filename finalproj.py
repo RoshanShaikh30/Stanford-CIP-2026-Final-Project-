@@ -32,6 +32,14 @@ sn.onkeypress(go_down, "s")
 sn.onkeypress(go_left, "a")
 sn.onkeypress(go_right, "d")
 
+#food
+food = turtle.Turtle()
+food.speed(0)
+food.shape("circle")
+food.color("red")
+food.penup()
+food.goto(0, 100)
+
 
 def move():
     if head.direction == "up":
