@@ -1,6 +1,6 @@
 import turtle
 import time
-delay = 0.1
+delay = 0.2
 sn = turtle.Screen()
 sn.title("Snake Game!")
 sn.bgcolor("blue")
@@ -15,6 +15,23 @@ head.color("green")
 head.penup()
 head.goto(0, 0)
 head.direction = "stop"
+
+        
+def go_up():
+    head.direction = "up"
+def go_down():
+    head.direction = "down"
+def go_left():
+    head.direction = "left"
+def go_right():
+    head.direction = "right"
+
+sn.listen()
+sn.onkeypress(go_up, "w")
+sn.onkeypress(go_down, "s")
+sn.onkeypress(go_left, "a")
+sn.onkeypress(go_right, "d")
+
 
 def move():
     if head.direction == "up":
@@ -41,3 +58,20 @@ while True:
 
 
 sn.mainloop()
+
+''' meh no need to complicate it
+def go_up():
+    if head.direction != "down":
+        head.direction = "up"
+
+def go_down():
+    if head.direction != "up":
+        head.direction = "down"
+
+def go_left():
+    if head.direction != "right":
+        head.direction = "left"
+
+def go_right():
+    if head.direction != "left":
+        head.direction = "right"'''
